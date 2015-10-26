@@ -1,0 +1,6 @@
+.form_container{margin: 0px auto; width: auto;}
+#subscriberAddFormTable{width: 100%;}
+.table_sub_heading{padding:5px 0px; text-align: left;}
+#subscriberAddFormTable td{padding: 10px 0px;}
+#subscriberAddFormTable td,.table_sub_heading{font-size: 16px;}
+#subscriberAddFormTable th:not(.table_sub_heading){text-align: right; font-weight: 100;}

@@ -1,0 +1,27 @@
+/*this file contains the styling for divisions on index script and also for general elements*/
+
+*{font-family: "calibri"; margin: 0px; padding: 0px;}
+#wrapper{margin: 0px auto; width: 1200px; border-radius: 10px; box-shadow: 0px 0px 10px; border: 1px solid black; background-color: #ccc;  min-height: 650px; }
+#container{margin: 0px auto; width: 90%; height: 100%;}
+.containerChild{width: auto; margin: 0px auto; position: relative; top:20px;}
+
+/*admin panel css*/
+#admin_panel_wrapper {position: relative; height: auto; width:100%; top:50px; background-color: #ddd; border-radius: 10px; overflow: hidden; border:2px solid #fff;}
+#admin_panel_container{margin: 0px auto; width: 100%; height: 100%;}
+#admin_panel_header{height: 25px; background-color: #003399; color:#fff; font-size: 20px; border-bottom:2px solid #fff;}
+#admin_panel_header div{width: 90%; margin: 0px auto; }
+#admin_panel_header ul{list-style-type: none; display: table;}
+#admin_panel_header ul li{list-style-type: none; display: inline-block; text-align: center; width:291px;  height: 25px; cursor: pointer; }
+#admin_panel_header ul li:hover{background-color: #5580D5; color:#000;}
+
+#admin_panel_contentholder{height:510px;  position: relative; background-color: #5580d5;}
+
+.contentHolder{position: absolute; left: 0px; top:0px;  display: none; height: 100%; width: 100%;}
+
+.contentHolder .contentSideMenu{position: absolute; height: 100%; width:15%;  left: 0px; top:0px; background-color: #003399; color:#fff; border-right: 2px solid #fff;}
+.contentHolder .contentSideMenu>div{position: relative;}
+.contentHolder .contentSideMenu>div ul {list-style-type: none;}
+.contentHolder .contentSideMenu>div ul li{list-style-type: none;  text-align: right; padding-right: 10px; border-bottom: 1px solid #ddd; cursor: pointer; font-size: 16px; padding-bottom: 10px; padding-top: 10px; font-weight: 900;}
+.contentHolder .contentSideMenu>div ul li:hover{background-color: #fff; color:#003399;}
+
+.contentHolder .responseHolder{width:85%; position: absolute; top:0px; left: 15%; overflow-y:auto; height: 100%;}

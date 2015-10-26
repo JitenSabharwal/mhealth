@@ -1,0 +1,8 @@
+/*css file containing the styles for several input elements*/
+.input{height: 30px; width: 250px; border-radius: 5px; border:2px solid #3366cc; font-size: 16px; padding-left: 2px;}
+.input:focus{border: 2px solid #003399; outline-style: none;}
+
+.btn{height: 30px; width: 150px; background-color: #3366cc; border: 2px solid #fff; border-radius: 5px; cursor: pointer; color: #fff; font-weight: 900; font-size: 16px;}
+.btn:hover{background-color: #003399;}
+.submitBtnHolder{text-align: center;}
+.address{width:500px; margin: 0px auto; height: 60px;}
