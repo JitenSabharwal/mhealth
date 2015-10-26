@@ -3,8 +3,8 @@
 $thumb_square_size 		= 200; //Thumbnails will be cropped to 200x200 pixels
 $max_image_size 		= 500; //Maximum image size (height and width)
 $thumb_prefix			= "thumb_"; //Normal thumb Prefix
-$destination_folder_1		= 'uploads/'; //upload directory ends with / (slash)
-$destination_folder_2		= 'uploads/thumbnails/'; //upload directory ends with / (slash)
+$destination_folder_1		= $_SESSION['image_path']; //upload directory ends with / (slash)
+$destination_folder_2		= $_SESSION['image_path'].'thumbnails/'; //upload directory ends with / (slash)
 $jpeg_quality 			= 90; //jpeg quality
 ##########################################
 
@@ -69,9 +69,9 @@ if(isset($_POST) && isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SER
 			/* We have succesfully resized and created thumbnail image
 			We can now output image to user's browser or store information in the database*/
 			echo '<div align="center">';
-			echo '<img src="uploads/thumbnails/'.$thumb_prefix . $new_file_name.'" alt="Thumbnail">';
+			echo '<img src='.$destination_folder_2.$thumb_prefix . $new_file_name.'" alt="Thumbnail">';
 			echo '<br />';
-			echo '<img src="uploads/'. $new_file_name.'" alt="Resized Image">';
+			echo '<img src="'.$destination_folder_1. $new_file_name.'" alt="Resized Image">';
 			echo '</div>';
 		}
 		

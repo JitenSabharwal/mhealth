@@ -57,33 +57,33 @@
 		//Adding Contact Person details
 		
 		$query="INSERT INTO subscriber_contactpersons( user_id, contact_name, contact_contact, contact_address, contact_city, contact_state, contact_relation) VALUES('$con_id','$c_subName','$c_subContact', '$c_subAddress',  '$c_subCity', '$c_subState', '$realtionship')";
-		//echo $query;
-		//if(empty($db->insertData($query)))
+		if(empty($db->insertData($query)))
 			{
 				echo "Error in Contact";
 			}
-		//else
+		else
 		 {
 			$query="INSERT INTO subscriber_dotprovider(user_id,dot_name,dot_address,dot_city,dot_state,dot_contact)
 					VALUES('$dot_id','$d_subName','$d_subAddress','$d_subCity','$d_subState','$d_subContact')";
-			//if(empty($db->insertData($query)))
+			if(empty($db->insertData($query)))
 			{
 				echo "Error in Dot";
 			}
-			//else
+			else
 			{
 				$query="INSERT INTO subscribers (user_id,contact_person_id,dot_id,doc_id,TB_no,TB_unit,Nikshay_no,Name_phi,sub_name,sub_sex,sub_DOB,sub_occupation,sub_contact,sub_address,sub_city,sub_state,sub_type,sub_blood_group) 
 						VALUES ('$sub_id','$con_id','$dot_id','$doc_id','$TB_no','$TB_unit','$Nikshay_no','$Name_phi','$subName','$subSex','$subDOB','$subOccupation','$subContact','$subAddress','$subCity','$subState','$sub_type','$sub_BloodGroup')";
-				//if(empty($db->insertData($query)))
+				if(empty($db->insertData($query)))
 					{
 						echo "Error in user";
 					}
-				//	else
+					else
 					{
 						$pass=md5($sub_id);
 						$query="insert into users(user_id,password,type_of_user,user_verified) VALUES('$sub_id','$pass','2','2')";
-						//$db->insertData($query);	
-						$_SESSION['image']=$Nikshay_no;	
+						$db->insertData($query);	
+						$_SESSION['image']=$Nikshay_no;
+						$_SESSION['image_path']="uploads/subscriber/";
 					}		
 			}
 			$db->disconnect();
